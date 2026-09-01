@@ -9,6 +9,7 @@ class Filme(models.Model):
    titulo = models.CharField(max_length=150)
    ano = models.IntegerField(default=0)
    diretor = models.CharField(max_length=100, default="Desconhecido") # Novo campo!
+   sinopse = models.TextField(default="")
    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, null=True)
    def __str__(self):
        return self.titulo
